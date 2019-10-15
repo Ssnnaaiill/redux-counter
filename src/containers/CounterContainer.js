@@ -1,6 +1,7 @@
 import Counter from '../components/Counter';
 import * as actions from '../actions';
 import { connect } from 'react-redux';
+import { getRandomColor } from '../utils';
 
 // connect state value in store as props
 const mapStateToProps = (state) => ({
@@ -13,7 +14,7 @@ const mapDispatchToProps = (dispatch) => ({
   onIncrement: () => dispatch(actions.increment()),
   onDecrement: () => dispatch(actions.decrement()),
   onSetColor: () => {
-    const color = 'black';  // temporary color setting
+    const color = getRandomColor();
     dispatch(actions.setColor(color));
   }
 });
