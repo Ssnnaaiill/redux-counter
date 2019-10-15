@@ -2,15 +2,26 @@ import * as types from './ActionTypes';
 
 // define action creators
 
-export const increment = () => ({
-  type: types.INCREMENT
+export const create = (color) => ({
+  type: types.CREATE,
+  color
 });
 
-export const decrement = () => ({
-  type: types.DECREMENT
+export const remove = () => ({
+  type: types.REMOVE
+})
+
+export const increment = (index) => ({
+  type: types.INCREMENT,
+  index
 });
 
-export const setColor = (color) => ({
+export const decrement = (index) => ({
+  type: types.DECREMENT,
+  index
+});
+
+export const setColor = ({ index, color }) => ({
   type: types.SET_COLOR,
   color
 });
